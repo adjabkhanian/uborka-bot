@@ -85,6 +85,7 @@ def schedule_jobs():
 async def main():
     schedule_jobs()
     scheduler.start()
+    await send_task()  # 👈 для проверки
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
