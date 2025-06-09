@@ -77,9 +77,9 @@ async def cmd_today(message: types.Message):
 # Планировщик
 def schedule_jobs():
     # В 10:00
-    scheduler.add_job(send_task, trigger="cron", hour=10, minute=10)
+    scheduler.add_job(send_task, trigger="cron", hour=10, minute=15)
     # В 22:00
-    scheduler.add_job(send_task, trigger="cron", hour=22, minute=10)
+    scheduler.add_job(send_task, trigger="cron", hour=22, minute=15)
 
 
 async def main():
