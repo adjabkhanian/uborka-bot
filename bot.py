@@ -79,8 +79,8 @@ async def cmd_today(message: types.Message):
 # === РАСПИСАНИЕ ===
 def schedule_jobs():
     tz = timezone("Europe/Moscow")
-    scheduler.add_job(send_task, trigger="cron", hour=3, minute=35, timezone=tz)
-    scheduler.add_job(send_task, trigger="cron", hour=3, minute=38, timezone=tz)
+    scheduler.add_job(send_task, trigger="cron", hour=10, minute=00, timezone=tz)
+    scheduler.add_job(send_task, trigger="cron", hour=22, minute=00, timezone=tz)
 
 # === ЗАПУСК ===
 async def main():
